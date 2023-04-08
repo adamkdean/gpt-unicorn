@@ -1,0 +1,56 @@
+/* Copyright (C) 2023 Adam K Dean <adamkdean@googlemail.com>
+   Use of this source code is governed by the GPL-3.0
+   license that can be found in the LICENSE file. */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.today {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-item img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.date {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPT Unicorn</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  <div class="container">
+    <h1>GPT Unicorn</h1>
+
+    <div class="today">
+      <% if (images.today) { %>
+        <%- images.today %>
+        <div class="date">Today</div>
+      <% } else { %>
+        <p>No image available for today.</p>
+      <% } %>
+    </div>
+
+    <div class="grid">
+      <% images.previous.forEach(function(image) { %>
+        <div class="grid-item">
+          <%- image %>
+          <div class="date"><%= image.date %></div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>
