@@ -30,7 +30,11 @@ export class BasicChatAPI {
       const choices = response.data.choices
       if (choices.length === 0) throw new Error('No response from OpenAI')
       if (choices.length > 1) throw new Error('More than one response from OpenAI')
-      return choices[0].message
+      return {
+        content: choices[0].message.content.trim(),
+        model: response.data.model,
+        tokens: response.data.usage.completion_tokens
+      }
     } catch (error) {
       console.error(error)
       throw error

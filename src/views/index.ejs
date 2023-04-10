@@ -3,31 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GPT Unicorn</title>
   <link rel="stylesheet" href="/style.css" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>GPT Unicorn</title>
 </head>
 <body>
   <div class="container">
     <h1>GPT Unicorn</h1>
+    <div class="subtitle">
+      <p>Asking GPT-4 to draw a unicorn every day to track changes in the model.</p>
+      <p>Based on this <a href="https://www.youtube.com/watch?v=qbIk7-JPB2c">talk</a> / <a href="https://arxiv.org/pdf/2303.12712.pdf">paper</a>.</p>
+      <p><a href="https://github.com/adamkdean/gpt-unicorn">GitHub Repo</a></p>
+    </div>
+
+    <% function formatTime(ms) {
+      let seconds = Math.floor(ms / 1000)
+      let minutes = Math.floor(seconds / 60)
+      let hours = Math.floor(minutes / 60)
+      let days = Math.floor(hours / 24)
+
+      hours %= 24
+      minutes %= 60
+      seconds %= 60
+
+      let timeString = ''
+      if (days) timeString += days + ' day' + (days > 1 ? 's' : '') + ', '
+      if (hours) timeString += hours + ' hour' + (hours > 1 ? 's' : '') + ', '
+      if (minutes) timeString += minutes + ' minute' + (minutes > 1 ? 's' : '') + ', '
+      if (seconds) timeString += seconds + ' second' + (seconds > 1 ? 's' : '')
+
+      return timeString
+    } %>
 
     <div class="today">
       <% if (images.today) { %>
-        <%- images.today %>
+        <img src="data:image/svg+xml,<%- encodeURIComponent(images.today.image) %>" alt="Today's image" />
         <div class="date">Today</div>
+        <div class="metadata"><%- images.today.metadata.model %> / <%- formatTime(images.today.metadata.elapsed) %> / <%= images.today.metadata.tokens %> tokens</div>
       <% } else { %>
         <p>No image available for today.</p>
       <% } %>
     </div>
 
-    <div class="grid">
-      <% images.previous.forEach(function(image) { %>
-        <div class="grid-item">
-          <%- image %>
-          <div class="date"><%= image.date %></div>
-        </div>
+    <div class="grid-container">
+      <% images.previous.forEach(function(entry) { %>
+      <div class="grid-item">
+        <img src="data:image/svg+xml,<%- encodeURIComponent(entry.image) %>" alt="<%= entry.date %>">
+        <div class="date"><%= entry.date %></div>
+        <div class="metadata"><%- entry.metadata.model %> / <%- formatTime(entry.metadata.elapsed) %> / <%= entry.metadata.tokens %> tokens</div>
+      </div>
       <% }); %>
-    </div>
+  </div>
+
   </div>
 </body>
 </html>
