@@ -2,7 +2,7 @@
 
 GPT Unicorn is a project that explores the image generation capabilities of OpenAI's GPT-4 model by generating a new unicorn image every day. The project aims to track the changes and progress of the model over time by analyzing the generated images.
 
-Demo: [gpt-unicorn.adamkdean.co.uk](https://gpt-unicorn.adamkdean.co.uk)
+[View the demo](https://gpt-unicorn.adamkdean.co.uk)
 
 ## Background
 
