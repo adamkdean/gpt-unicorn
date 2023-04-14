@@ -4,6 +4,10 @@ GPT Unicorn is a project that explores the image generation capabilities of Open
 
 [View the demo](https://gpt-unicorn.adamkdean.co.uk)
 
+[Read the blog post](https://adamkdean.co.uk/posts/gpt-unicorn-a-daily-exploration-of-gpt-4s-image-generation-capabilities)
+
+[See the discussion](https://news.ycombinator.com/item?id=35561747)
+
 ## Background
 
 This project is inspired by the paper [Sparks of Artificial General Intelligence: Early experiments with GPT-4](https://arxiv.org/pdf/2303.12712.pdf) by Sébastien Bubeck, Varun Chandrasekaran, Ronen Eldan, Johannes Gehrke, Eric Horvitz, Ece Kamar, Peter Lee, Yin Tat Lee, Yuanzhi Li, Scott Lundberg, Harsha Nori, Hamid Palangi, Marco Tulio Ribeiro, and Yi Zhang. In the paper, the authors explore the capabilities of GPT-4, discussing its performance on tasks spanning various domains and tasks.
