@@ -20,6 +20,7 @@ docker run \
   --restart always \
   --name $CONTAINER_NAME \
   --network core-network \
+  --volume gptunicorn-data:$STORAGE_PATH \
   --expose 8000 \
   --env HTTP_PORT=8000 \
   --env STORAGE_PATH=$STORAGE_PATH \
