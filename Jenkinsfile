@@ -22,6 +22,7 @@ docker run \
   --network core-network \
   --expose 8000 \
   --env HTTP_PORT=8000 \
+  --env STORAGE_PATH=$STORAGE_PATH \
   --env OPENAI_API_KEY=$OPENAI_API_KEY \
   --env VIRTUAL_HOST=$HOSTNAME \
   --env LETSENCRYPT_HOST=$HOSTNAME \
