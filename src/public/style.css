@@ -34,6 +34,7 @@ div.subtitle p {
   margin-bottom: 40px;
   text-align: center;
   border: 1px solid #ccc;
+  background: #eee;
   padding: 1rem;
 }
 
@@ -53,6 +54,7 @@ div.subtitle p {
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
+  background: #eee;
   padding: 1rem;
 }
 
