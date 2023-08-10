@@ -18,7 +18,7 @@ GPT Unicorn focuses on the image generation aspect of GPT-4, specifically its ab
 
 GPT Unicorn queries GPT-4 once per day to generate a new unicorn image in SVG format. The image generation process involves the following steps:
 
-1. Query GPT-4 with the prompt "Draw a unicorn in SVG" etc (full prompt in the source code).
+1. Query GPT-4 with the prompt "Draw a unicorn in SVG" etc (full prompt [in the source code](https://github.com/adamkdean/gpt-unicorn/blob/master/src/lib/generator.js#L40)).
 2. Process the output to extract the SVG code.
 3. Render the SVG code to produce the final image.
 
