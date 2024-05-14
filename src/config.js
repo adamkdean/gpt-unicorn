@@ -8,7 +8,7 @@ dotenv.config()
 export default {
   openai: {
     apiKey: process.env.OPENAI_API_KEY,
-    model: process.env.OPENAI_MODEL || 'gpt-4'
+    model: process.env.OPENAI_MODEL || 'gpt-4o'
   },
   server: {
     port: process.env.HTTP_PORT || 3000
