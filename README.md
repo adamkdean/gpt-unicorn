@@ -1,3 +1,6 @@
+> This project has now been archived. The data is backed up, somewhere on one of my machines.
+> This was a fun project but AI has so far surpassed this now that it's just costing tokens.
+
 # GPT Unicorn
 
 GPT Unicorn is a project that explores the image generation capabilities of OpenAI's GPT-4 model by generating a new unicorn image every day. The project aims to track the changes and progress of the model over time by analyzing the generated images.
